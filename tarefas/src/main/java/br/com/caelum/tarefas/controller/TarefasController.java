@@ -2,6 +2,7 @@ package br.com.caelum.tarefas.controller;
 
 import java.sql.SQLException;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -49,6 +50,20 @@ public class TarefasController {
 	public String mostra(Long id, Model model) {
 		JdbcTarefaDao dao = new JdbcTarefaDao();
 		model.addAttribute("tarefa", dao.buscaPorId(id));
-		return "tarefa/mostra";
+		return "tarefas/mostra";
+	}
+
+	@RequestMapping("alteraTarefa")
+	public String altera(Tarefa tarefa) {
+		JdbcTarefaDao dao = new JdbcTarefaDao();
+		dao.altera(tarefa);
+		return "redirect:listaTarefas";
+	}
+
+	@RequestMapping("finalizaTarefa")
+	public void finaliza(Long id, HttpServletResponse response) {
+		JdbcTarefaDao dao = new JdbcTarefaDao();
+		dao.finaliza(id);
+		response.setStatus(200);
 	}
 }

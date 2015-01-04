@@ -1,5 +1,5 @@
 body {
-	font-family: "arial", sans-serif;
+  font-family: "arial", sans-serif;
 	padding-top: 20px;
 }
 
@@ -22,22 +22,22 @@ body table tr:hover {
 	background-color: #cfc;
 }
 
-h1, h2, h3 {
+h1,h2,h3 {
 	text-shadow: 2px 1px 5px grey;
 }
 
 input, textarea {
 	background-color: #eef;
 	border-radius: 10px;
-	margin-bottom: 0px;
-	padding: 2x 5px;
+	margin-bottom: 10px;
+	padding: 2px 5px;
 }
 
 input[type=submit] {
 	background: #eef;
 	box-shadow: 0 1px 5px #333;
 	border: 0;
-	padding: 5px;
+	padding: 7px;
 	border: solid #aaf;
 	border-radius: 10px;
 }
@@ -56,7 +56,7 @@ span[id*=errors] {
 
 table {
 	border-collapse: collapse;
-	text-align: center;
+	text-align: left;
 }
 
 table td {

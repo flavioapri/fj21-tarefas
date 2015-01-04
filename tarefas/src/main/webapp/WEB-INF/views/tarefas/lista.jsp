@@ -4,6 +4,7 @@
 <head>
 <title>FJ21 Tarefas - Lista de Tarefas</title>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+<link type="text/css" href="resources/css/tarefas.css" rel="stylesheet" />
 </head>
 <body>
 

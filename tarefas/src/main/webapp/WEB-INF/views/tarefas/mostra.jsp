@@ -13,7 +13,7 @@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css">
-
+<link type="text/css" href="resources/css/tarefas.css" rel="stylesheet" />
 <title>Tarefas - Alterar Tarefa</title>
 </head>
 <body>

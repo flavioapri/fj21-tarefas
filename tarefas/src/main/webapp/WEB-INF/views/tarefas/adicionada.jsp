@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>FJ21 Tarefas</title>
+<title>FJ21 Tarefas - Adicionada</title>
 </head>
 <body>
-	<h1>Nova tarefa adicionada com sucesso!</h1>
+	<h2>Nova tarefa adicionada com sucesso!</h2>
+	<br/>
+	<a href="listaTarefas">&lt;&lt; Voltar para a lista.</a>
 </body>
 </html>

@@ -31,7 +31,7 @@ public class JdbcTarefaDao {
 	}
 
 	public void adiciona(Tarefa tarefa) {
-		String sql = "insert into tarefas (descricao, finalizado) values (?,?)";
+		String sql = "insert into Tarefa (descricao, finalizado) values (?,?)";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -50,7 +50,7 @@ public class JdbcTarefaDao {
 			throw new IllegalStateException("Id da tarefa não deve ser nula.");
 		}
 
-		String sql = "delete from tarefas where id = ?";
+		String sql = "delete from Tarefa where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -62,7 +62,7 @@ public class JdbcTarefaDao {
 	}
 
 	public void altera(Tarefa tarefa) {
-		String sql = "update tarefas set descricao = ?, finalizado = ?, dataFinalizacao = ? where id = ?";
+		String sql = "update Tarefa set descricao = ?, finalizado = ?, dataFinalizacao = ? where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -81,7 +81,7 @@ public class JdbcTarefaDao {
 		try {
 			List<Tarefa> tarefas = new ArrayList<Tarefa>();
 			PreparedStatement stmt = this.connection
-					.prepareStatement("select * from tarefas");
+					.prepareStatement("select * from Tarefa");
 
 			ResultSet rs = stmt.executeQuery();
 
@@ -107,7 +107,7 @@ public class JdbcTarefaDao {
 
 		try {
 			PreparedStatement stmt = this.connection
-					.prepareStatement("select * from tarefas where id = ?");
+					.prepareStatement("select * from Tarefa where id = ?");
 			stmt.setLong(1, id);
 
 			ResultSet rs = stmt.executeQuery();
@@ -131,7 +131,7 @@ public class JdbcTarefaDao {
 			throw new IllegalStateException("Id da tarefa não deve ser nula.");
 		}
 
-		String sql = "update tarefas set finalizado = ?, dataFinalizacao = ? where id = ?";
+		String sql = "update Tarefa set finalizado = ?, dataFinalizacao = ? where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);

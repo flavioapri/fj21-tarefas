@@ -16,7 +16,7 @@ public class AdicionaTarefa {
 		tarefa.setDescricao("Comprar ração do cachorro");
 		tarefa.setFinalizado(false);
 		tarefa.setDataFinalizacao(Calendar.getInstance());
-		
+		 
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("tarefas");
 		EntityManager manager = factory.createEntityManager();
 		
